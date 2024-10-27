@@ -12,6 +12,7 @@ const CardComponent = ({ image, title, description, isButtonEnabled }) => {
         {isButtonEnabled ? (
           <div className="card-actions">
             <button className="btn btn-primary">Show more...</button>
+            isAnAdul
           </div>
         ) : (
           ""
