@@ -5,12 +5,12 @@ function DailyForecast({ forecast }) {
   const days = forecast.list.filter((item, index) => index % 8 === 0); // Get the forecast for each day (every 24 hours)
 
   return (
-    <div className="p-6 bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl shadow-lg">
+    <div className="p-6 bg-transparent rounded-xl shadow-lg">
       <div className="mb-8 text-center">
         <h1 className="text-5xl font-extrabold text-white mb-2">
           5-Day Forecast
         </h1>
-        <p className="text-lg text-gray-400">
+        <p className="text-lg text-gray-600">
           Stay updated with the latest weather forecast.
         </p>
       </div>
@@ -23,6 +23,7 @@ function DailyForecast({ forecast }) {
             })}
             temp={day.main.temp}
             weather={day.weather[0].description}
+            icon={day.weather[0].icon} // Pass the icon code
           />
         ))}
       </div>

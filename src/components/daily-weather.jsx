@@ -1,14 +1,14 @@
-import daisyui from "daisyui";
 import React from "react";
 
-function DailyWeather({ day, temp, weather }) {
+function DailyWeather({ day, temp, weather, icon }) {
+  const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`; // Construct the icon URL
+
   return (
-    <div className="card bg-gray-800 text-center p-6 shadow-lg rounded-xl transition duration-300 hover:scale-105 hover:shadow-xl">
-      <div className="card-body space-y-4">
-        <h2 className="text-2xl font-semibold text-white">{day}</h2>
-        <h2 className="text-4xl font-bold text-white">{temp}°F</h2>
-        <p className="text-lg text-gray-400">{weather}</p>
-      </div>
+    <div className="p-4 bg-white rounded-lg text-center">
+      <h2 className="text-xl font-bold text-gray-900">{day}</h2>
+      <img src={iconUrl} alt={weather} className="mx-auto mb-2" />
+      <p className="text-2xl font-semibold text-gray-600">{temp}°C</p>
+      <p className="text-gray-400">{weather}</p>
     </div>
   );
 }
