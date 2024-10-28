@@ -16,7 +16,7 @@ function Navigation({ onSearch }) {
   };
 
   return (
-    <div className="navbar bg-gray-300 rounded-b-xl">
+    <div className="navbar bg-gray-300">
       {/* Left Section with Logo and Text */}
       <div className="flex items-center gap-4 flex-1">
         {/* Weather App Logo */}
